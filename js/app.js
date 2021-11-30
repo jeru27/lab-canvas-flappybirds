@@ -8,17 +8,18 @@ class Background{
         this.width = w;
         this.height = h;
         this.image = new Image();
-        this.image.src = "../images/bg.png"; // ./=> in the same level ../=> in a different level 
+        this.image.src = "../images/bg.png";
         this.imgGameOver = new Image();
 
     }
-    //metodos
+    //methods
     draw(){
         if(this.x <- canvas.width){
             this.x = 0;
         }
         this.x--;
-    // dibujar la imagen
+    
+        // draw an image
         ctx.drawImage(this.image,this.x,this.y,this.width,this.height);
         ctx.drawImage(
             this.image,
@@ -26,17 +27,11 @@ class Background{
             this.y,
             this.width,
             this.height);
-
-
-
-
     }
 
     gameOver(){
         ctx.font = '80px Arial';
-        ctx.fillText = ("Te moriste mi rey", 250, 200);
-        //ctx.drawImage(this.imgGameOver, 50,50,100,100);
-
+        ctx.fillText = ("You died, sorry!", 250, 200);
     }
 }
 
@@ -51,17 +46,10 @@ class Flappy{
         this.image = new Image();
         this.image.src = "../images/flappy.png";
     }
-    //metodos
+    
+    //methods
     draw(){
-        //validar gravedad
-
-
-
-        //dibujar
         ctx.drawImage(this.image,this.x,this.y,this.width,this.height);
-
-
-
     }
 
     collision(item){

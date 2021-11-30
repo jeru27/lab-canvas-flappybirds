@@ -14,16 +14,11 @@ let points = 0;
 let diff = 1;
 let requestID;
 
-
 //audio
 const audio = new Audio();
 //audio.src=""
 
-//audioend
-
-// ejemplo para heroe
-
-let dylanDefault = {
+let player = {
     vida: 3,
     status: "pequeno", 
     monedas: 0
